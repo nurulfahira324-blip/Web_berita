@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Kabar Kabut Asap</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-api" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.800 7-6.800 0-3-1.800-5-3.200-6.600-.3 1.600-1.200 2.600-2.300 3 .5-3.400-.9-6.500-4-8.600.2 3-1.600 4.800-3 6.700C5.400 11.500 5 13 5 15.200 5 19.200 8 22 12 22z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/></symbol>
+    <symbol id="i-daun" viewBox="0 0 24 24"><path d="M20 4C9 4 4 9 4 15c0 2 .8 3.500 2 5 1.500-5 5-8 9-9-4 2-6.500 5-7.500 9.500C16 20 20 14 20 4z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/></symbol>
+    <symbol id="i-hati" viewBox="0 0 24 24"><path d="M12 20s-7-4.400-7-10a4 4 0 0 1 7-2.500A4 4 0 0 1 19 10c0 5.600-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/></symbol>
+    <symbol id="i-topi" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9zM6 11.500V16c0 1.500 3 3 6 3s6-1.500 6-3v-4.500M22 9v6" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8L3 12z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/><circle cx="8" cy="9" r="1.400" fill="currentColor"/></symbol>
+    <symbol id="i-kalender" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.800"/><path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- MENU NAVIGASI -->
+<nav class="navbar navbar-expand-lg navbar-kabut sticky-top">
+    <div class="container">
+        <a class="navbar-brand logo" href="index.html">Kabar <span>Kabut</span> Asap</a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#menuUtama"
+            aria-controls="menuUtama" aria-expanded="false"
+            aria-label="Buka menu navigasi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuUtama">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                <li class="nav-item"><a class="nav-link" href="detail.html?id=1">Detail Berita</a></li>
+                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+                <li class="nav-item ms-lg-3"><a class="btn btn-aksen btn-sm px-4" href="login.html">Masuk</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="hero-label mb-3 d-inline-block">Informasi Kabut Asap</span>
+                <h1 class="display-5 fw-bold mb-3">Kenali Penyebab dan Dampak Kabut Asap</h1>
+                <p class="lead mb-4">
+                    Kabar Kabut Asap menyajikan informasi tentang kebakaran hutan dan lahan,
+                    kualitas udara, kesehatan, dan dampaknya bagi kegiatan sekolah,
+                    lengkap dengan langkah sederhana untuk melindungi diri.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="berita.html" class="btn btn-aksen btn-lg px-4">Baca Berita</a>
+                    <a href="tentang.html" class="btn btn-outline-light btn-lg px-4">Tentang Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- BERITA TERBARU -->
+<main class="porto">
+    <div class="container">
+
+        <div class="judul text-center">
+            <h2>Berita Terbaru</h2>
+            <span class="garis"></span>
+            <p>Informasi tentang penyebab, dampak, dan cara menghadapi kabut asap.</p>
+        </div>
+
+        <div class="row g-4">
+        <div class="col-lg-6">
+            <article class="card kartu-berita tema-karhutla h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-sm-6 foto">
+                        <img src="gambar/gambar1.jpg" alt="Kebakaran hutan dan lahan" class="foto-img" loading="lazy">
+                        <span class="badge bg-danger foto-badge">Karhutla</span>
+                    </div>
+                    <div class="col-sm-6 info">
+                        <span class="ikon"><svg><use href="#i-api"/></svg></span>
+                        <h3 class="h5">Kebakaran Hutan Menjadi Penyebab Kabut Asap</h3>
+                        <hr>
+                        <p class="ringkas">Kebakaran hutan dan lahan menghasilkan asap yang dapat mengganggu aktivitas masyarakat serta kualitas udara.</p>
+                        <div class="baris"><svg class="kecil"><use href="#i-tag"/></svg><div><small>Kategori</small><strong class="hasil">Karhutla</strong></div></div>
+                        <div class="baris"><svg class="kecil"><use href="#i-kalender"/></svg><div><small>Terbit</small><strong>16 Oktober 2026</strong></div></div>
+                        <a href="detail.html?id=1" class="btn btn-baca btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-lg-6">
+            <article class="card kartu-berita tema-lingkungan h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-sm-6 foto">
+                        <img src="gambar/gambar2.jpeg" alt="Kabut asap dan kondisi lingkungan" class="foto-img" loading="lazy">
+                        <span class="badge bg-success foto-badge">Lingkungan</span>
+                    </div>
+                    <div class="col-sm-6 info">
+                        <span class="ikon"><svg><use href="#i-daun"/></svg></span>
+                        <h3 class="h5">Kabut Asap Mengurangi Kualitas Udara</h3>
+                        <hr>
+                        <p class="ringkas">Asap yang menyebar di udara dapat mengurangi jarak pandang dan membuat lingkungan menjadi kurang sehat.</p>
+                        <div class="baris"><svg class="kecil"><use href="#i-tag"/></svg><div><small>Kategori</small><strong class="hasil">Lingkungan</strong></div></div>
+                        <div class="baris"><svg class="kecil"><use href="#i-kalender"/></svg><div><small>Terbit</small><strong>16 Oktober 2026</strong></div></div>
+                        <a href="detail.html?id=2" class="btn btn-baca btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-lg-6">
+            <article class="card kartu-berita tema-kesehatan h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-sm-6 foto">
+                        <img src="gambar/gambar3.jpeg" alt="Dampak kabut asap terhadap kesehatan" class="foto-img" loading="lazy">
+                        <span class="badge bg-warning text-dark foto-badge">Kesehatan</span>
+                    </div>
+                    <div class="col-sm-6 info">
+                        <span class="ikon"><svg><use href="#i-hati"/></svg></span>
+                        <h3 class="h5">Dampak Kabut Asap bagi Kesehatan</h3>
+                        <hr>
+                        <p class="ringkas">Paparan kabut asap dapat menyebabkan batuk, iritasi mata, dan gangguan pernapasan. Masyarakat perlu mengurangi paparan asap.</p>
+                        <div class="baris"><svg class="kecil"><use href="#i-tag"/></svg><div><small>Kategori</small><strong class="hasil">Kesehatan</strong></div></div>
+                        <div class="baris"><svg class="kecil"><use href="#i-kalender"/></svg><div><small>Terbit</small><strong>16 Oktober 2026</strong></div></div>
+                        <a href="detail.html?id=3" class="btn btn-baca btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="col-lg-6">
+            <article class="card kartu-berita tema-pendidikan h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-sm-6 foto">
+                        <img src="gambar/gambar4.jpg" alt="Kegiatan pendidikan saat kabut asap" class="foto-img" loading="lazy">
+                        <span class="badge bg-primary foto-badge">Pendidikan</span>
+                    </div>
+                    <div class="col-sm-6 info">
+                        <span class="ikon"><svg><use href="#i-topi"/></svg></span>
+                        <h3 class="h5">Kabut Asap Dapat Mengganggu Kegiatan Sekolah</h3>
+                        <hr>
+                        <p class="ringkas">Kualitas udara yang buruk dapat mengganggu kegiatan belajar, terutama aktivitas siswa di luar ruangan.</p>
+                        <div class="baris"><svg class="kecil"><use href="#i-tag"/></svg><div><small>Kategori</small><strong class="hasil">Pendidikan</strong></div></div>
+                        <div class="baris"><svg class="kecil"><use href="#i-kalender"/></svg><div><small>Terbit</small><strong>16 Oktober 2026</strong></div></div>
+                        <a href="detail.html?id=4" class="btn btn-baca btn-sm mt-auto align-self-start">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="berita.html" class="btn btn-aksen btn-lg px-4">Lihat Berita Lainnya <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- TIPS -->
+        <div class="alert alert-warning tips mt-5">
+            <strong>Tips:</strong>
+            Kurangi aktivitas di luar ruangan ketika udara berasap.
+            Gunakan masker yang sesuai dan ikuti informasi kualitas udara
+            dari sumber resmi.
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-kabut text-center p-3 mt-5">
+    <p class="mb-0">&copy; 2026 Kabar Kabut Asap</p>
+</footer>
+
+<!-- JAVASCRIPT BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

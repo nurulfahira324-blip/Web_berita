@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tentang - Kabar Kabut Asap</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS sendiri -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .gambar-tentang {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .tujuan-card {
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .tujuan-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-kabut sticky-top">
+    <div class="container">
+        <a class="navbar-brand logo" href="index.html">Kabar <span>Kabut</span> Asap</a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#menuUtama"
+            aria-controls="menuUtama" aria-expanded="false"
+            aria-label="Buka menu navigasi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuUtama">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                <li class="nav-item"><a class="nav-link" href="detail.html?id=1">Detail Berita</a></li>
+                <li class="nav-item"><a class="nav-link active" href="tentang.html" aria-current="page">Tentang</a></li>
+                <li class="nav-item ms-lg-3"><a class="btn btn-aksen btn-sm px-4" href="login.html">Masuk</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- TENTANG WEBSITE -->
+<main class="container my-5">
+
+    <div class="row align-items-center g-4">
+
+        <!-- INFORMASI WEBSITE -->
+        <div class="col-lg-6">
+
+            <h1 class="mb-3">Tentang Kabar Kabut Asap</h1>
+
+            <p>
+                Kabar Kabut Asap adalah website yang memberikan
+                informasi mengenai kabut asap, kebakaran hutan dan
+                lahan, lingkungan, kesehatan, serta pendidikan.
+            </p>
+
+            <p>
+                Website ini dibuat untuk membantu masyarakat memahami
+                penyebab dan dampak kabut asap serta mengetahui cara
+                sederhana untuk mengurangi risikonya.
+            </p>
+
+            <a href="berita.html" class="btn btn-baca mt-2">
+                Lihat Berita
+            </a>
+
+        </div>
+
+        <!-- GAMBAR TENTANG -->
+        <div class="col-lg-6">
+
+            <img src="gambar/gambar5.jpg"
+                class="gambar-tentang"
+                alt="Kebakaran hutan dan kabut asap">
+
+        </div>
+
+    </div>
+
+    <!-- TUJUAN WEBSITE -->
+    <h2 class="mt-5 mb-4">Tujuan Website</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card tujuan-card p-3 shadow-sm">
+                <div class="card-body">
+                    <h3 class="h5">Informasi</h3>
+                    <p class="mb-0">
+                        Memberikan informasi sederhana mengenai
+                        kabut asap dan penyebabnya.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card tujuan-card p-3 shadow-sm">
+                <div class="card-body">
+                    <h3 class="h5">Kesehatan</h3>
+                    <p class="mb-0">
+                        Memberikan informasi tentang dampak kabut asap
+                        terhadap kesehatan masyarakat.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card tujuan-card p-3 shadow-sm">
+                <div class="card-body">
+                    <h3 class="h5">Lingkungan</h3>
+                    <p class="mb-0">
+                        Mengajak masyarakat untuk menjaga lingkungan
+                        dan mencegah kebakaran hutan.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PENGELOLA WEBSITE -->
+    <h2 class="mt-5 mb-4">Pengelola Website</h2>
+
+    <div class="card p-4 shadow-sm">
+
+        <p>
+            <strong>Nama:</strong> Nurul Fahira
+        </p>
+
+        <p>
+            <strong>Program Studi:</strong>
+            Pendidikan Teknologi Informasi
+        </p>
+
+        <p>
+            <strong>Mata Kuliah:</strong>
+            Pemrograman Web
+        </p>
+
+        <p class="mb-0">
+            <strong>Universitas:</strong>
+            Universitas Sulawesi Barat
+        </p>
+
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-kabut text-center p-3 mt-5">
+    <p class="mb-0">&copy; 2026 Kabar Kabut Asap</p>
+</footer>
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

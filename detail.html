@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detail Berita - Kabar Kabut Asap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .detail-container {
+            max-width: 1100px;
+        }
+
+        .detail-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        #judulBerita {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        #gambarBerita {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        #isiBerita {
+            font-size: 18px;
+            line-height: 1.9;
+            text-align: justify;
+            color: #333;
+        }
+
+        #isiBerita p {
+            margin-bottom: 20px;
+        }
+
+        .pilihan-berita a {
+            margin: 4px;
+        }
+
+        @media (max-width: 576px) {
+            #judulBerita {
+                font-size: 24px;
+            }
+
+            #gambarBerita {
+                height: 250px;
+            }
+
+            #isiBerita {
+                font-size: 16px;
+                text-align: left;
+            }
+
+            .detail-card .card-body {
+                padding: 20px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-kabut sticky-top">
+    <div class="container">
+        <a class="navbar-brand logo" href="index.html">Kabar <span>Kabut</span> Asap</a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#menuUtama"
+            aria-controls="menuUtama" aria-expanded="false"
+            aria-label="Buka menu navigasi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuUtama">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                <li class="nav-item"><a class="nav-link active" href="detail.html?id=1" aria-current="page">Detail Berita</a></li>
+                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+                <li class="nav-item ms-lg-3"><a class="btn btn-aksen btn-sm px-4" href="login.html">Masuk</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- DETAIL BERITA -->
+<main class="container detail-container my-5">
+
+    <a href="berita.html" class="btn btn-baca mb-4">
+        &larr; Kembali ke Berita
+    </a>
+
+    <article class="card detail-card shadow-sm">
+        <div class="card-body p-5">
+
+            <span id="kategoriBerita" class="badge bg-secondary mb-3"></span>
+
+            <h1 id="judulBerita" class="mb-3"></h1>
+
+            <p id="tanggalBerita" class="text-muted mb-4"></p>
+
+            <!-- GAMBAR BERITA -->
+            <img id="gambarBerita"
+                src="gambar/gambar1.jpg"
+                alt="Gambar berita"
+                class="img-fluid mb-4">
+
+            <!-- ISI BERITA -->
+            <div id="isiBerita"></div>
+
+        </div>
+    </article>
+
+    <!-- PILIH BERITA LAIN -->
+    <section class="mt-5">
+        <h3 class="mb-3">Baca Berita Lain</h3>
+
+        <div class="pilihan-berita">
+            <a href="detail.html?id=1" class="btn btn-outline-danger">Karhutla</a>
+            <a href="detail.html?id=2" class="btn btn-outline-success">Lingkungan</a>
+            <a href="detail.html?id=3" class="btn btn-outline-warning">Kesehatan</a>
+            <a href="detail.html?id=4" class="btn btn-outline-primary">Pendidikan</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-kabut text-center p-3 mt-5">
+    <p class="mb-0">
+        &copy; 2026 Kabar Kabut Asap |
+        Informasi tentang dampak kabut asap
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// DATA EMPAT BERITA
+const daftarBerita = {
+    1: {
+        kategori: "Karhutla",
+        judul: "Kebakaran Hutan Menjadi Penyebab Kabut Asap",
+        tanggal: "16 Oktober 2026",
+        gambar: "gambar/gambar1.jpg",
+        isi: `
+            <p>Kebakaran hutan dan lahan atau karhutla merupakan salah satu penyebab munculnya kabut asap. Kebakaran dapat terjadi akibat pembukaan lahan dengan api atau kondisi lingkungan yang kering.</p>
+
+            <p>Asap dari kebakaran dapat menyebar hingga ke permukiman. Kondisi ini dapat mengurangi jarak pandang, mengganggu aktivitas masyarakat, dan menurunkan kualitas udara.</p>
+
+            <h4>Upaya Pencegahan</h4>
+            <p>Masyarakat perlu menghindari pembakaran lahan sembarangan dan segera melaporkan kebakaran kepada petugas. Pencegahan perlu dilakukan bersama untuk mengurangi risiko kebakaran meluas.</p>
+        `
+    },
+
+    2: {
+        kategori: "Lingkungan",
+        judul: "Kabut Asap Mengurangi Kualitas Udara",
+        tanggal: "16 Oktober 2026",
+        gambar: "gambar/gambar2.jpeg",
+        isi: `
+            <p>Kabut asap terjadi ketika asap dan partikel di udara menyebabkan kualitas udara menurun. Salah satu sumbernya adalah kebakaran hutan dan lahan yang menghasilkan asap dalam jumlah besar.</p>
+
+            <p>Asap yang menyebar dapat mengurangi jarak pandang dan mengganggu kegiatan masyarakat. Kondisi ini juga dapat memengaruhi tumbuhan, hewan, serta keseimbangan lingkungan.</p>
+
+            <h4>Upaya Menjaga Lingkungan</h4>
+            <p>Masyarakat dapat membantu dengan tidak membakar sampah sembarangan, menjaga kawasan hutan, melaporkan kebakaran, dan mendukung pemulihan lahan yang rusak akibat kebakaran.</p>
+        `
+    },
+
+    3: {
+        kategori: "Kesehatan",
+        judul: "Dampak Kabut Asap bagi Kesehatan",
+        tanggal: "16 Oktober 2026",
+        gambar: "gambar/gambar3.jpeg",
+        isi: `
+            <p>Kabut asap dapat berdampak buruk bagi kesehatan karena mengandung partikel halus dan zat hasil pembakaran. Partikel tersebut dapat masuk ke saluran pernapasan ketika seseorang menghirup udara tercemar.</p>
+
+            <p>Keluhan yang dapat muncul antara lain mata perih, batuk, iritasi tenggorokan, dan kesulitan bernapas. Anak-anak dan lansia perlu mendapat perhatian khusus.</p>
+
+            <h4>Cara Melindungi Diri</h4>
+            <p>Kurangi aktivitas di luar ruangan ketika kualitas udara memburuk dan pantau informasi dari sumber resmi. Jika mengalami sesak napas atau gejala berat, segera cari bantuan tenaga kesehatan.</p>
+        `
+    },
+
+    4: {
+        kategori: "Pendidikan",
+        judul: "Kabut Asap Dapat Mengganggu Kegiatan Sekolah",
+        tanggal: "16 Oktober 2026",
+        gambar: "gambar/gambar4.jpg",
+        isi: `
+            <p>Kabut asap dapat mengganggu kegiatan belajar mengajar. Udara yang tercemar bisa membuat siswa dan guru tidak nyaman, terutama ketika melakukan aktivitas di luar ruangan.</p>
+
+            <p>Jika kualitas udara memburuk, kegiatan olahraga dan aktivitas luar ruangan mungkin perlu dibatasi. Sekolah perlu memperhatikan informasi kualitas udara serta arahan pihak berwenang.</p>
+
+            <h4>Menjaga Kegiatan Belajar</h4>
+            <p>Orang tua, guru, dan pihak sekolah perlu bekerja sama untuk menjaga kesehatan siswa. Penyesuaian pembelajaran dapat dilakukan sesuai kondisi dan kebijakan setempat.</p>
+        `
+    }
+};
+
+// MEMBACA ID BERITA DARI ALAMAT HALAMAN
+const parameter = new URLSearchParams(window.location.search);
+const id = parameter.get("id") || "1";
+const berita = daftarBerita[id];
+
+// MENGAMBIL ELEMEN HTML
+const kategori = document.getElementById("kategoriBerita");
+const judul = document.getElementById("judulBerita");
+const tanggal = document.getElementById("tanggalBerita");
+const gambar = document.getElementById("gambarBerita");
+const isi = document.getElementById("isiBerita");
+
+// WARNA BADGE SESUAI KATEGORI
+const warnaBadge = {
+    Karhutla: "bg-danger",
+    Lingkungan: "bg-success",
+    Kesehatan: "bg-warning text-dark",
+    Pendidikan: "bg-primary"
+};
+
+// MENAMPILKAN BERITA SESUAI ID
+if (berita) {
+    kategori.textContent = berita.kategori;
+    kategori.className = "badge mb-3 " + (warnaBadge[berita.kategori] || "bg-secondary");
+    judul.textContent = berita.judul;
+    tanggal.textContent = "Tanggal: " + berita.tanggal;
+
+    gambar.src = berita.gambar;
+    gambar.alt = berita.judul;
+
+    isi.innerHTML = berita.isi;
+
+    document.title = berita.judul + " - Kabar Kabut Asap";
+} else {
+    kategori.textContent = "Informasi";
+    judul.textContent = "Berita Tidak Ditemukan";
+    tanggal.textContent = "";
+
+    gambar.style.display = "none";
+
+    isi.innerHTML = `
+        <p>Maaf, berita yang kamu pilih tidak tersedia.</p>
+        <p>Silakan kembali ke halaman berita dan pilih berita lainnya.</p>
+    `;
+}
+
+// JIKA FILE GAMBAR TIDAK DITEMUKAN
+gambar.addEventListener("error", function() {
+    gambar.style.display = "none";
+});
+</script>
+
+</body>
+</html>

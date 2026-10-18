@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kabar Kabut Asap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-kabut sticky-top">
+    <div class="container">
+        <a class="navbar-brand logo" href="index.html">Kabar <span>Kabut</span> Asap</a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#menuUtama"
+            aria-controls="menuUtama" aria-expanded="false"
+            aria-label="Buka menu navigasi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuUtama">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+                <li class="nav-item"><a class="nav-link" href="detail.html?id=1">Detail Berita</a></li>
+                <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+                <li class="nav-item ms-lg-3"><a class="btn btn-aksen btn-sm px-4" href="login.html">Masuk</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="login-wrap d-flex align-items-center py-5">
+    <div class="container">
+        <div class="row g-0 login-card mx-auto">
+
+            <!-- PANEL KIRI -->
+            <div class="col-md-5 login-panel d-none d-md-flex flex-column justify-content-end p-4 text-white">
+                <span class="login-label mb-3">Kabar Kabut Asap</span>
+                <h2 class="h3 fw-bold">Pantau Informasi Kabut Asap</h2>
+                <p class="mb-0">
+                    Masuk untuk membaca berita, memahami dampaknya,
+                    dan mengetahui cara menghadapi kabut asap.
+                </p>
+            </div>
+
+            <!-- FORM LOGIN -->
+            <div class="col-md-7 bg-white p-4 p-md-5">
+                <h1 class="h3 fw-bold mb-1">Selamat Datang</h1>
+                <p class="text-secondary mb-4">Silakan masuk untuk melanjutkan.</p>
+
+                <form id="formLogin" novalidate>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-semibold">Email</label>
+                        <input type="text" id="email" class="form-control form-control-lg"
+                            placeholder="nama@email.com" autocomplete="off">
+                        <div id="errEmail" class="mt-1 small"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password" class="form-label fw-semibold">Password</label>
+                        <div class="input-group input-group-lg">
+                            <input type="password" id="password" class="form-control"
+                                placeholder="Minimal 8 karakter" autocomplete="off">
+                            <button type="button" id="tombolLihat"
+                                class="btn btn-lihat" aria-pressed="false">Lihat</button>
+                        </div>
+                        <div id="errPassword" class="mt-1 small"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-baca btn-lg w-100">Login</button>
+
+                    <div id="pesan" class="mt-3" role="status"></div>
+                </form>
+
+                <p class="text-center small mt-4 mb-0">
+                    <a href="index.html" class="link-kembali">&larr; Kembali ke Beranda</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script src="javascript/login.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
